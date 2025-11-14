@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parents - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+<header class="header-bar">
+    <h1>St Alphonsus Primary School</h1>
+</header>
+<main class="container my-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2>Parents / Guardians</h2>
+        <div>
+            <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#parentModal">Add New Parent</button>
+        </div>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>parentID</th>
+                <th>firstName</th>
+                <th>lastName</th>
+                <th>address</th>
+                <th>email</th>
+                <th>telephone</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="parentsTableBody">
+            <!-- Parents will be added here -->
+        </tbody>
+    </table>
+    <!-- Add/Edit Parent Modal -->
+    <div class="modal fade" id="parentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add / Edit Parent</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="parentForm">
+                        <input type="hidden" id="parentID">
+                        <div class="mb-3">
+                            <label class="form-label">firstName</label>
+                            <input type="text" id="parentFirstName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">lastName</label>
+                            <input type="text" id="parentLastName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">address</label>
+                            <input type="text" id="parentAddress" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">email</label>
+                            <input type="email" id="parentEmail" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">telephone</label>
+                            <input type="tel" id="parentTelephone" class="form-control">
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Save Parent</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../JS/main.js"></script>
+</body>
+</html>

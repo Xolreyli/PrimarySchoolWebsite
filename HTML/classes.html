@@ -13,21 +13,26 @@
 <main class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h2>Classes</h2>
-        <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#classModal">Add New Class</button>
+        <div>
+            <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#classModal">Add New Class</button>
+        </div>
     </div>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Class Name</th>
-                <th>Capacity</th>
-                <th>Number of Pupils</th>
-                <th>Teacher</th>
+                <th>classID</th>
+                <th>className</th>
+                <th>studentCount</th>
+                <th>teacherID</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody id="classesTableBody">
+            <!-- Classes will be added here -->
         </tbody>
     </table>
+    <!-- Add/Edit Class Modal -->
     <div class="modal fade" id="classModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -39,7 +44,7 @@
                     <form id="classForm">
                         <input type="hidden" id="classID">
                         <div class="mb-3">
-                            <label class="form-label">Class Name</label>
+                            <label class="form-label">className</label>
                             <input type="text" id="className" class="form-control" required>
                         </div>
                         <div class="mb-3">
@@ -47,7 +52,7 @@
                             <input type="number" id="classCapacity" class="form-control" min="1" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Teacher ID</label>
+                            <label class="form-label">teacherID</label>
                             <input type="number" id="teacherID" class="form-control" required>
                         </div>
                         <button type="submit" class="btn btn-custom w-100">Save Class</button>
@@ -58,6 +63,6 @@
     </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="/JS/main.js"></script>
+<script src="../JS/main.js"></script>
 </body>
 </html>
