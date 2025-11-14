@@ -1,8 +1,6 @@
-/* General page background */
 body {
-    background-color: #eef3ff;
+    background-color: #DCEED1;
 }
-/* Login container */
 .login-box {
     max-width: 400px;
     margin: 120px auto;
@@ -11,18 +9,29 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(0,0,0,0.1);
 }
-/* Dashboard cards */
 .dashboard-card {
     transition: 0.2s;
     cursor: pointer;
+    background-color: #DCEED1;
 }
 .dashboard-card:hover {
     transform: scale(1.05);
+    background-color: #C7E1BC;
 }
-/* Header styling */
 .header-bar {
-    background: #1e4d92;
+    background-color: #AAC0AA;
     color: white;
     padding: 20px;
     text-align: center;
+}
+.btn-primary, .btn-custom {
+    background-color: #AAC0AA;
+    color: white;
+    border: none;
+}
+.btn-primary:hover, .btn-custom:hover {
+    background-color: #8FA78F;
+}
+.text-custom {
+    color: #545C52;
 }
