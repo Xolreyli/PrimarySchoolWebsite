@@ -14,3 +14,8 @@ document.getElementById("loginForm").addEventListener("submit", function(e) {
         error.textContent = "Incorrect email or password.";
     }
 });
+
+// Logout function
+function logout() {
+    window.location.href = 'login.html';
+}
