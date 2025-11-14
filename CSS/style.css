@@ -1,0 +1,27 @@
+/* General page background */
+body {
+    background-color: #eef3ff;
+}
+/* Login container */
+.login-box {
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+}
+/* Dashboard cards */
+.dashboard-card {
+    transition: 0.2s;
+}
+.dashboard-card:hover {
+    transform: scale(1.05);
+}
+/* Header styling */
+.header-bar {
+    background: #1e4d92;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
