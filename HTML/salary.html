@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Classes - Dashboard</title>
+    <title>Salary - Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
 <body>
 <header class="header-bar">
@@ -12,50 +12,49 @@
 </header>
 <main class="container my-5">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h2>Classes</h2>
+        <h2>Salary</h2>
         <div>
             <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
-            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#classModal">Add New Class</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#studentModal">Add New Salary</button>
         </div>
     </div>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>classID</th>
-                <th>className</th>
-                <th>studentCount</th>
-                <th>teacherID</th>
+                <th>salaryID</th>
+                <th>salaryRole</th>
+                <th>salaryValue</th>
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody id="classesTableBody">
-            <!-- Classes will be added here -->
+        <tbody id="salaryTableBody">
+            <!-- Salaries will be added here -->
         </tbody>
     </table>
-    <!-- Add/Edit Class Modal -->
-    <div class="modal fade" id="classModal" tabindex="-1" aria-hidden="true">
+    <!-- Add/Edit Salary Modal -->
+    <div class="modal fade" id="salarytModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add / Edit Class</h5>
+                    <h5 class="modal-title">Add / Edit Salary</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="classForm">
-                        <input type="hidden" id="classID">
+                    <form id="salaryForm">
+                        <input type="hidden" id="salaryID">
                         <div class="mb-3">
-                            <label class="form-label">className</label>
-                            <input type="text" id="className" class="form-control" required>
+                            <label class="form-label">salaryID</label>
+                            <input type="number" id="salary" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Capacity</label>
-                            <input type="number" id="classCapacity" class="form-control" min="1" required>
+                            <label class="form-label">salaryRole</label>
+                            <input type="text" id="salaryRole" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">teacherID</label>
-                            <input type="number" id="teacherID" class="form-control" required>
+                            <label class="form-label">salaryValue</label>
+                            <input type="number" id="salaryValue" class="form-control" min="1" required>
                         </div>
-                        <button type="submit" class="btn btn-custom w-100">Save Class</button>
+                        <button type="submit" class="btn btn-custom w-100">Save Salary</button>
                     </form>
                 </div>
             </div>
