@@ -15,56 +15,55 @@
         <h2>Students</h2>
         <div>
             <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
-            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#studentModal">Add New Student</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#medicalInfoModal">Add New Medical Info</button>
         </div>
     </div>
     <table class="table table-striped">
         <thead>
             <tr>
+                <th>studentMedicalID</th>
+                <th>severity</th>
+                <th>medication</th>
+                <th>emergencyAction</th>
                 <th>studentID</th>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>age</th>
-                <th>address</th>
-                <th>classID</th>
-                <th>parentID</th>
+                <th>conditionID</th>
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody id="studentsTableBody">
-            <!-- Students will be added here -->
+        <tbody id="medicalInfoTableBody">
+            <!-- Medical Info will be added here -->
         </tbody>
     </table>
-    <!-- Add/Edit Student Modal -->
-    <div class="modal fade" id="studentModal" tabindex="-1" aria-hidden="true">
+    <!-- Add/Edit Medical Info Modal -->
+    <div class="modal fade" id="medicalInfoModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add / Edit Student</h5>
+                    <h5 class="modal-title">Add / Edit Medical Info</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="studentForm">
-                        <input type="hidden" id="studentID">
+                    <form id="medicalInfoForm">
+                        <input type="hidden" id="studentMedicalID">
                         <div class="mb-3">
-                            <label class="form-label">firstName</label>
-                            <input type="text" id="studentFirstName" class="form-control" required>
+                            <label class="form-label">severity</label>
+                            <input type="text" id="severity" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">lastName</label>
-                            <input type="text" id="studentLastName" class="form-control" required>
+                            <label class="form-label">medication</label>
+                            <input type="text" id="medication" class="form-control" min="1" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">age</label>
-                            <input type="number" id="studentAge" class="form-control" min="1" required>
+                            <label class="form-label">emergencyAction</label>
+                            <input type="text" id="emergencyAction" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">address</label>
-                            <input type="text" id="studentAddress" class="form-control" required>
+                            <label class="form-label">studentID</label>
+                            <input type="number" id="student" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">classID</label>
-                            <input type="number" id="studentClass" class="form-control" required>
+                            <label class="form-label">conditionID</label>
+                            <input type="number" id="condition" class="form-control" required>
                         </div>
                         <button type="submit" class="btn btn-custom w-100">Save Student</button>
                     </form>

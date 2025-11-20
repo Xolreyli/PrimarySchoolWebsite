@@ -15,7 +15,7 @@
         <h2>Salary</h2>
         <div>
             <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
-            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#studentModal">Add New Salary</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#salaryModal">Add New Salary</button>
         </div>
     </div>
     <table class="table table-striped">
@@ -32,7 +32,7 @@
         </tbody>
     </table>
     <!-- Add/Edit Salary Modal -->
-    <div class="modal fade" id="salarytModal" tabindex="-1" aria-hidden="true">
+    <div class="modal fade" id="salaryModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -42,10 +42,6 @@
                 <div class="modal-body">
                     <form id="salaryForm">
                         <input type="hidden" id="salaryID">
-                        <div class="mb-3">
-                            <label class="form-label">salaryID</label>
-                            <input type="number" id="salary" class="form-control" required>
-                        </div>
                         <div class="mb-3">
                             <label class="form-label">salaryRole</label>
                             <input type="text" id="salaryRole" class="form-control" required>
