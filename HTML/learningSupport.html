@@ -15,52 +15,57 @@
         <h2>Students</h2>
         <div>
             <button class="btn btn-secondary me-2" onclick="window.location.href='index.html'">Go Back</button>
-            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#attendanceModal">Add New Attendance</button>
+            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#learningSupportModal">Add New Learning Support</button>
         </div>
     </div>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>attendanceID</th>
-                <th>date</th>
-                <th>amStatus</th>
-                <th>pmStatus</th>
+                <th>supportID</th>
+                <th>supportType</th>
+                <th>details</th>
+                <th>frequency</th>
                 <th>studentID</th>
+                <th>assignedStaff</th>
                 <th>Actions</th>
             </tr>
         </thead>
-        <tbody id="attendanceTableBody">
-            <!-- Attendance will be added here -->
+        <tbody id="learningSupportTableBody">
+            <!-- Learning Support will be added here -->
         </tbody>
     </table>
-    <!-- Add/Edit Attendance Modal -->
-    <div class="modal fade" id="attendanceModal" tabindex="-1" aria-hidden="true">
+    <!-- Add/Edit Learning Support Modal -->
+    <div class="modal fade" id="learningSupportModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Add / Edit Attendance</h5>
+                    <h5 class="modal-title">Add / Edit Learning Support</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="attendanceForm">
-                        <input type="hidden" id="attendanceID">
+                    <form id="learningSupportForm">
+                        <input type="hidden" id="supportID">
                         <div class="mb-3">
-                            <label class="form-label">date</label>
-                            <input type="date" id="date" class="form-control" required>
+                            <label class="form-label">supportType</label>
+                            <input type="text" id="supportType" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">amStatus</label>
-                            <input type="text" id="amStatus" class="form-control" min="1" required>
+                            <label class="form-label">details</label>
+                            <input type="text" id="details" class="form-control" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">pmStatus</label>
-                            <input type="text" id="pmStatus" class="form-control" min="1" required>
+                            <label class="form-label">frequency</label>
+                            <input type="text" id="frequency" class="form-control" min="1" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">studentID</label>
-                            <input type="number" id="students" class="form-control">
+                            <input type="number" id="studentAddress" class="form-control" required>
                         </div>
-                        <button type="submit" class="btn btn-custom w-100">Save Attendance</button>
+                        <div class="mb-3">
+                            <label class="form-label">assignedStaff</label>
+                            <input type="number" id="assignedStaff" class="form-control" required>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Save Learning Support</button>
                     </form>
                 </div>
             </div>
