@@ -8,7 +8,7 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
     const DEMO_PASSWORD = "admin123";
 
     if (email === DEMO_EMAIL && password === DEMO_PASSWORD) {
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
     } else {
         error.style.display = "block";
         error.textContent = "Incorrect email or password.";
@@ -17,5 +17,5 @@ document.getElementById("loginForm")?.addEventListener("submit", function(e) {
 
 // Logout function
 function logout() {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 }
